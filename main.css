@@ -291,3 +291,19 @@ footer {
         margin-left: 170px; /* Move o título mais para a direita */
     }
 }
+
+@media (max-width: 768px) {
+    .social-links {
+        display: flex;
+        justify-content: flex-start; /* Alinha os ícones mais à esquerda */
+    }
+
+    .social-links li {
+        margin-right: 15px; /* Espaçamento entre os ícones */
+    }
+
+    .social-links img {
+        width: 40px; /* Aumenta o tamanho dos ícones para 40px */
+        height: auto; /* Mantém a proporção dos ícones */
+    }
+}
