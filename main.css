@@ -28,13 +28,15 @@ header h1 {
 }
 
 header nav {
-    margin-left: auto;
+    display: flex;
+    justify-content: flex-end; /* Garante que os itens sejam alinhados à direita */
 }
 
 header nav ul {
     display: flex;
-    justify-content: flex-end;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 header nav ul li {
@@ -70,6 +72,7 @@ section .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
 }
 
 section .container {
@@ -142,7 +145,7 @@ section p {
 #contact .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:start ;
     text-align: center;
 }
 
@@ -210,11 +213,16 @@ footer {
 
 /* Responsividade para Dispositivos Móveis */
 @media (max-width: 768px) {
+
+    @media (max-width: 768px) {
+        header .container {
+            flex-direction: column;
+        }
+
     /* Ajustes para o header */
     header nav ul {
         flex-direction: column;
         align-items: center;
-        margin-top: 10px;
     }
 
     header nav ul li {
