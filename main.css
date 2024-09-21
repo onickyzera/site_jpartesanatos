@@ -19,7 +19,6 @@ body, input, textarea {
 header {
     padding: 16px 0;
     background-color: #629dc2;
-    letter-spacing: -1px;
 }
 
 header h1 {
