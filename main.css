@@ -22,8 +22,30 @@ header {
     letter-spacing: -1px;
 }
 
+header h1 {
+    text-align: center;
+    font-family: "Bungee", sans-serif;
+    color: white;
+}
+
 header nav {
     margin-left: auto;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 header nav li {
@@ -41,6 +63,7 @@ header nav li a {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
+    padding: 20px;
 }
 
 header .container,
@@ -72,7 +95,27 @@ section p {
 
 #about .container {
     display: flex;
-    align-items: flex-start; 
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#about .store-front {
+    max-width: 400px;
+    width: 100%;
+}
+
+#about .text-body {
+    flex: 1;
+}
+
+#about .text-body h2 {
+    font-family: "Bungee", sans-serif;
+}
+
+#about .text-body p {
+    margin-bottom: 16px;
 }
 
 #about .text-body {
@@ -98,16 +141,26 @@ section p {
 }
 
 #contact .container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .contact-methods {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .contact-methods > div {
-    flex: 1; 
+    flex: 1; /* Faz com que os itens ocupem espaços iguais */
+    margin-right: 20px;
+    
+}
+
+.contact-methods > div:last-child {
+    margin-right: 0; /* Remove margem da direita do último item */
 }
 
 .contact-methods > div:nth-child(2) {
@@ -156,3 +209,43 @@ footer {
     padding: 16px 0;
 }
 
+/* Responsividade para Dispositivos Móveis */
+@media (max-width: 768px) {
+    /* Ajustes para o header */
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Ajustes para a seção "Sobre a Loja" */
+    #about .container {
+        flex-direction: column; /* Coloca imagem e texto um embaixo do outro */
+        text-align: center; /* Centraliza o texto em telas pequenas */
+    }
+
+    #about .store-front {
+        max-width: 100%;
+        margin-bottom: 20px; /* Espaçamento entre imagem e texto */
+    }
+
+    #about .text-body {
+        text-align: left;
+    }
+
+    /* Ajustes para a seção "Contato" */
+    #contact .container {
+        flex-direction: column; /* Coloca cada bloco de contato um abaixo do outro */
+    }
+
+    .contact-methods {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
