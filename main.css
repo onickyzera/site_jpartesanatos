@@ -152,21 +152,21 @@ section p {
 .contact-methods {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
 }
 
 .contact-methods > div {
-    flex: 1; /* Faz com que os itens ocupem espaços iguais */
-    margin-right: 20px;
+    margin-right: 100px
     
 }
 
 .contact-methods > div:last-child {
-    margin-right: 0; /* Remove margem da direita do último item */
+    margin-right: 0;
 }
 
 .contact-methods > div:nth-child(2) {
-    margin-left: -40px;
+    margin-left: -200px;
 }
 
 .contact-methods > div:nth-child(3) {
@@ -251,28 +251,43 @@ footer {
     }
 
     .contact-methods {
-        flex-direction: column; /* Empilha os blocos de contato no modo mobile */
-        align-items: center; /* Centraliza os itens */
+        flex-direction: column; /* Empilha os blocos no mobile */
+        align-items: flex-start;
     }
 
     .contact-methods > div {
         width: 100%; /* Garante que os blocos ocupem toda a largura da tela no mobile */
+        margin-right: 0;
         margin-bottom: 20px; /* Adiciona espaçamento entre os blocos */
     }
 
     .contact-methods > div:last-child {
         text-align: right; /* Alinha o texto do bloco à direita */
         margin-bottom: 0;
-        padding-right: 20px; /* Move o texto um pouco mais para a direita */
+        padding-right: 22px; /* Move o texto um pouco mais para a direita */
     }
 
+    .contact-methods > div:nth-child(2) {
+        margin-left: -00px;
+    }
+
+    .contact-methods > div:nth-child(3) {
+        text-align: left;
+    }
+
+
 .contact-methods h3 {
-    text-align: center; /* Centraliza os títulos em telas pequenas */
+    text-align: left; /* Centraliza os títulos em telas pequenas */
+}
+
+.contact-methods p {
+    text-align: right;
+    margin-right: -60px;
 }
 
 @media (max-width: 768px) {
     #contact .contact-methods > div:last-child h3 {
-        text-align: right; /* Alinha o título à direita */
-        margin-right: 100px; /* Move o título mais para a direita */
+        text-align: leftt; /* Alinha o título à direita */
+        margin-left: 170px; /* Move o título mais para a direita */
     }
 }
