@@ -282,7 +282,7 @@ footer {
 
 .contact-methods p {
     text-align: right;
-    margin-right: -60px;
+    margin-right: -160px;
 }
 
 @media (max-width: 768px) {
