@@ -212,8 +212,7 @@ footer {
 }
 
 /* Responsividade para Dispositivos Móveis */
-@media (max-width: 768px) {
-
+@media (max-width: 768px) {}
     @media (max-width: 768px) {
         header .container {
             flex-direction: column;
@@ -248,11 +247,32 @@ footer {
     /* Ajustes para a seção "Contato" */
     #contact .container {
         flex-direction: column; /* Coloca cada bloco de contato um abaixo do outro */
+        padding: 10px;
     }
 
     .contact-methods {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+        flex-direction: column; /* Empilha os blocos de contato no modo mobile */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .contact-methods > div {
+        width: 100%; /* Garante que os blocos ocupem toda a largura da tela no mobile */
+        margin-bottom: 20px; /* Adiciona espaçamento entre os blocos */
+    }
+
+    .contact-methods > div:last-child {
+        text-align: right; /* Alinha o texto do bloco à direita */
+        margin-bottom: 0;
+        padding-right: 20px; /* Move o texto um pouco mais para a direita */
+    }
+
+.contact-methods h3 {
+    text-align: center; /* Centraliza os títulos em telas pequenas */
+}
+
+@media (max-width: 768px) {
+    #contact .contact-methods > div:last-child h3 {
+        text-align: right; /* Alinha o título à direita */
+        margin-right: 100px; /* Move o título mais para a direita */
     }
 }
