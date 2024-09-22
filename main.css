@@ -157,8 +157,7 @@ section p {
 }
 
 .contact-methods > div {
-    margin-right: 100px
-    
+    margin-right: 100px;
 }
 
 .contact-methods > div:last-child {
@@ -212,11 +211,11 @@ footer {
 }
 
 /* Responsividade para Dispositivos Móveis */
-@media (max-width: 768px) {}
-    @media (max-width: 768px) {
-        header .container {
-            flex-direction: column;
-        }
+@media (max-width: 768px) {
+
+    header .container {
+        flex-direction: column;
+    }
 
     /* Ajustes para o header */
     header nav ul {
@@ -267,43 +266,31 @@ footer {
         padding-right: 22px; /* Move o texto um pouco mais para a direita */
     }
 
-    .contact-methods > div:nth-child(2) {
-        margin-left: -00px;
+    .contact-methods h3 {
+        text-align: left; /* Alinha os títulos em telas pequenas */
     }
 
-    .contact-methods > div:nth-child(3) {
-        text-align: left;
+    .contact-methods p {
+        text-align: right;
+        margin-right: -160px;
     }
 
-
-.contact-methods h3 {
-    text-align: left; /* Centraliza os títulos em telas pequenas */
-}
-
-.contact-methods p {
-    text-align: right;
-    margin-right: -160px;
-}
-
-@media (max-width: 768px) {
     #contact .contact-methods > div:last-child h3 {
-        text-align: leftt; /* Alinha o título à direita */
+        text-align: left; /* Alinha o título à esquerda */
         margin-left: 170px; /* Move o título mais para a direita */
     }
-}
 
-@media (max-width: 768px) {
     .social-links {
         display: flex;
-        justify-content: flex-start; /* Alinha os ícones mais à esquerda */
+        justify-content: flex-start;
     }
 
     .social-links li {
-        margin-right: 15px; /* Espaçamento entre os ícones */
+        margin-right: 15px;
     }
 
     .social-links img {
-        width: 40px; /* Aumenta o tamanho dos ícones para 40px */
-        height: auto; /* Mantém a proporção dos ícones */
-    }
+        width: 40px;
+        height: auto;
+    } 
 }
